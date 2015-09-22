@@ -4,12 +4,11 @@
 	<meta charset="utf-8">
 	<title>Chemistry Quiz</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container container-fluid">
 		<div class="row">
 			<center>
 				<h1>Chemistry Quiz</h1><hr>
@@ -21,8 +20,24 @@
 		</div>
 
 		<br><br><br><br>
-		<!-- Results table -->
+		<!-- results table -->
 		<div class="row">
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Question</th>
+							<th>Your answer</th>
+							<th>Result</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- <div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class="table-responsive">
@@ -40,21 +55,21 @@
 				</div>
 			</div>
 			<div class="col-sm-4"></div>
-		</div>
+		</div> -->
 
-		<!-- Credits -->
+		<!-- credits -->
 		<hr>
 		<footer>
 			<center>
 				<p>Developed by Jesstern Rays in collaboration with Aldrin Thomas.</p>
 			</center>
 		</footer>
-	</div>
+	</div> <!-- end .container -->
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/underscore-min.js"></script>
-	<!-- Script -->
+	<!-- script -->
 	<script src="js/script.js"></script>
 
 </body>
