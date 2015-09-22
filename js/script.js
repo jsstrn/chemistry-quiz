@@ -96,9 +96,9 @@ $(document).ready(function(){
       answer = 'is not soluble';
     }
     if (result) {
-      result = '<i class="fa fa-check"></i>';
+      result = '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>';
     } else {
-      result = '<i class="fa fa-times"></i>';
+      result = '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>';
     }
     // display results to table
     var table = '<tr><td>' + question + '</td><td>' + answer + '</td><td>' + result + '</td></tr>';
