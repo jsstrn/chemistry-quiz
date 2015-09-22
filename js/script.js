@@ -73,6 +73,7 @@ $(document).ready(function(){
       'Aqueous ammonia'
     ]
   };
+  // get next random question
   function getQuestion(){
     var cation = _.sample(data.cation);
     var anion = _.sample(data.anion);
@@ -82,12 +83,18 @@ $(document).ready(function(){
   }
   // display first question
   var question = getQuestion();
+  // score
+  var scoreTotal = 0;
+  var scorePlayer = 0;
   // button onclick
   $('button').click(function(){
+    scoreTotal++;
+    // results
     var answer = $(this).data('answer');
     var result = false;
     if (answer === _.contains(data.soluble, question)) {
       result = true;
+      scorePlayer++;
     }
     // rename answer
     if (answer) {
@@ -100,7 +107,9 @@ $(document).ready(function(){
     } else {
       result = '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>';
     }
-    // display results to table
+    // display score
+    $('h3#score').html('Score: ' + scorePlayer + ' out of ' + scoreTotal);
+    // display results
     var table = '<tr><td>' + question + '</td><td>' + answer + '</td><td>' + result + '</td></tr>';
     $('tbody').append(table);
     // get next question
