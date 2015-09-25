@@ -92,6 +92,12 @@ $(document).ready(function(){
   // score
   var scoreTotal = 0;
   var scorePlayer = 0;
+  // rankings
+  $.getJSON('js/highscore.json', function(highscore){
+    console.log('Read JSON file successfully');
+    var x = highscore.question-mode;
+    console.log(x);
+  });
   // button onclick
   $('button').click(function(){
     scoreTotal++;
