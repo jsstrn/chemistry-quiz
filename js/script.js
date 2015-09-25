@@ -74,15 +74,22 @@ $(document).ready(function(){
     ]
   };
   // get next random question
+  var numberOfQuestions = 30;
   function getQuestion(){
     var cation = _.sample(data.cation);
     var anion = _.sample(data.anion);
     var question = cation + ' ' + anion;
+    numberOfQuestions--;
     $('h3#question').html(question);
     return question;
   }
   // display first question
-  var question = getQuestion();
+  if (numberOfQuestions > 0) {
+    var question = getQuestion();
+    // enable buttons
+    $('#btn-yes').prop('disabled', false);
+    $('#btn-no').prop('disabled', false);
+  }
   // score
   var scoreTotal = 0;
   var scorePlayer = 0;
@@ -114,9 +121,15 @@ $(document).ready(function(){
     $('tbody').append(table);
     // get next question
     var nextQuestion = '';
-    do {
-      nextQuestion = getQuestion();
-    } while (nextQuestion === question);
-    question = nextQuestion;
+    if (numberOfQuestions > 0) {
+      do {
+        nextQuestion = getQuestion();
+      } while (nextQuestion === question);
+      question = nextQuestion;
+    } else {
+      // disable buttons
+      $('#btn-yes').prop('disabled', true);
+      $('#btn-no').prop('disabled', true);
+    }
   });
 });
