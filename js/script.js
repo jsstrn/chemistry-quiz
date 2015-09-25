@@ -22,8 +22,7 @@ $(document).ready(function(){
       'chloride',
       'sulfate',
       'carbonate',
-      'hydroxide',
-      'ammonia'
+      'hydroxide'
     ],
     'soluble': [
       'Potassium nitrate',
