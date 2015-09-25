@@ -93,10 +93,17 @@ $(document).ready(function(){
   var scoreTotal = 0;
   var scorePlayer = 0;
   // rankings
-  $.getJSON('js/highscore.json', function(highscore){
-    console.log('Read JSON file successfully');
-    // var x = highscore.question-mode;
-    // console.log(x);
+  $.ajax({
+    type: 'GET',
+    url: 'js/highscore.json',
+    dataType: 'json',
+    success: function(highscore){
+      var x = highscore.question-mode;
+      console.log(x);
+    },
+    error: function(){
+      console.log('Failed to read JSON file.');
+    }
   });
   // button onclick
   $('button').click(function(){
