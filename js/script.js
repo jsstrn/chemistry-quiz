@@ -98,13 +98,100 @@ $(document).ready(function(){
     url: 'js/highscore.json',
     dataType: 'json',
     success: function(highscore){
-      var x = highscore.question-mode;
+      var x = highscore.question_mode;
       console.log(x);
     },
     error: function(){
       console.log('Failed to read JSON file.');
     }
   });
+  var highscore = {
+    "question-mode": [
+      {
+        "name": "John Appleseed",
+        "score": 1
+      },
+      {
+        "name": "Shaiming",
+        "score": 2
+      },
+      {
+        "name": "Cheng Cheng",
+        "score": 3
+      },
+      {
+        "name": "Wu Yin",
+        "score": 4
+      },
+      {
+        "name": "Norito Shinoda",
+        "score": 5
+      },
+      {
+        "name": "Nobu Takai",
+        "score": 6
+      },
+      {
+        "name": "Moklor Vallic",
+        "score": 7
+      },
+      {
+        "name": "Kev Shala",
+        "score": 8
+      },
+      {
+        "name": "George Ignatyev",
+        "score": 9
+      },
+      {
+        "name": "Zushidomiku",
+        "score": 10
+      }
+    ],
+    "timed-mode": [
+      {
+        "name": "John Appleseed",
+        "score": 1
+      },
+      {
+        "name": "Shaiming",
+        "score": 2
+      },
+      {
+        "name": "Cheng Cheng",
+        "score": 3
+      },
+      {
+        "name": "Wu Yin",
+        "score": 4
+      },
+      {
+        "name": "Norito Shinoda",
+        "score": 5
+      },
+      {
+        "name": "Nobu Takai",
+        "score": 6
+      },
+      {
+        "name": "Moklor Vallic",
+        "score": 7
+      },
+      {
+        "name": "Kev Shala",
+        "score": 8
+      },
+      {
+        "name": "George Ignatyev",
+        "score": 9
+      },
+      {
+        "name": "AJT",
+        "score": 10
+      }
+    ]
+  };
+
   // button onclick
   $('button').click(function(){
     scoreTotal++;
