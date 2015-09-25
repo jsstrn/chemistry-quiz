@@ -95,8 +95,8 @@ $(document).ready(function(){
   // rankings
   $.getJSON('js/highscore.json', function(highscore){
     console.log('Read JSON file successfully');
-    var x = highscore.question-mode;
-    console.log(x);
+    // var x = highscore.question-mode;
+    // console.log(x);
   });
   // button onclick
   $('button').click(function(){
