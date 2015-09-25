@@ -1,5 +1,5 @@
 {
-  "question-mode": [
+  "question_mode": [
     {
       "name": "John Appleseed",
       "score": 1
@@ -41,7 +41,7 @@
       "score": 10
     }
   ],
-  "timed-mode": [
+  "timed_mode": [
     {
       "name": "John Appleseed",
       "score": 1
